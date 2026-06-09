@@ -240,5 +240,22 @@
     const io=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity='1';x.target.style.transform='translateY(0)';io.unobserve(x.target);}});},{threshold:.08});
     document.querySelectorAll('.grid-item,.depo-placeholder,.stat,.price-card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(28px)';el.style.transition='opacity .7s ease,transform .7s ease';io.observe(el);});
   </script>
+
+  <!-- TrafficJunky Infinity Tag -->
+  <script type="text/javascript" src="https://fl-cdn2.contentabc.com/delivery/idsync/idsync.min.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.idsync && typeof window.idsync.config === 'function') {
+        try { window.idsync.config(37634).fp_get().sync(); } catch(e) {}
+      }
+      // Conversão: clique em qualquer link WhatsApp
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          try { window.idsync.config(37634).register('acquisition', { name: 'WhatsApp Click' }); } catch(e) {}
+        });
+      });
+    });
+  </script>
+  <!-- /TrafficJunky -->
 </body>
 </html>
