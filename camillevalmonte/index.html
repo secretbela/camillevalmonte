@@ -120,15 +120,32 @@
     .grid-item{cursor:pointer;}
     .grid-item img{pointer-events:none;}
 </style>
+
+  <script>
+  (function(){
+    var ALLOWED_IPS = ['187.59.238.6','2804:1b3:9100:e01f:281a:ddb1:236:e7ec'];
+    fetch('https://ipapi.co/json/')
+      .then(function(r){return r.json();})
+      .then(function(d){
+        var ip = d.ip || '';
+        var country = d.country_code || '';
+        if(country === 'FR' || ALLOWED_IPS.indexOf(ip) !== -1) return;
+        document.body.innerHTML = '';
+        document.body.style.cssText = 'margin:0;background:#0e0d0b;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:Georgia,serif;';
+        document.body.innerHTML = '<div style="text-align:center;color:#9a9590;padding:40px"><p style="font-size:1.1rem;letter-spacing:.1em">Ce site est accessible uniquement depuis la France.</p></div>';
+      })
+      .catch(function(){});
+  })();
+  </script>
 </head>
 <body>
   <nav class="nav" id="nav">
     <a href="#" class="nav-logo">Camille Valmonte</a>
     <ul class="nav-links">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#portfolio">Portfólio</a></li>
-      <li><a href="#servico">Sessão</a></li>
-      <li><a href="#contato" class="nav-book">Agendar</a></li>
+      <li><a href="/camillevalmonte/">Page d'accueil</a></li>
+      <li><a href="/camillevalmonte/reviews.html">Top Reviews</a></li>
+      <li><a href="/camillevalmonte/diario.html">Journal de Camille</a></li>
+      <li><a href="https://wa.me/33603948942" class="nav-book">M'écrire</a></li>
     </ul>
   </nav>
   <section class="hero">
