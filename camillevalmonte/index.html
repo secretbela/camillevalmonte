@@ -33,6 +33,40 @@
     .hero-tag::before{content:'';display:block;width:32px;height:1px;background:var(--gold);}
     .hero-title{font-family:var(--serif);font-size:clamp(3rem,7.5vw,6.2rem);font-weight:400;line-height:1.06;letter-spacing:-.01em;margin-bottom:28px;}
     .hero-title em{font-style:italic;color:var(--gold-pale);}
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camille Valmonte — Sexmodel Brésilienne</title>
+  <meta name="description" content="Dernière nuit à Paris 17." />
+   <meta name="description" content="Agenda presque complète." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ink:#0e0d0b;--ink-soft:#3a3730;--fog:#9a9590;--parch:#f6f3ee;--gold:#b8913a;--gold-pale:#d4b06a;--white:#fdfcfa;--serif:'Playfair Display',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--ease:cubic-bezier(.4,0,.2,1);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--sans);background:var(--ink);color:var(--white);overflow-x:hidden;}
+    img{display:block;width:100%;height:100%;object-fit:cover;}
+    a{color:inherit;text-decoration:none;}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;align-items:center;justify-content:space-between;padding:28px 6%;transition:background .5s var(--ease),padding .4s var(--ease);}
+    .nav.solid{background:rgba(14,13,11,.94);backdrop-filter:blur(14px);padding:16px 6%;border-bottom:1px solid rgba(184,145,58,.18);}
+    .nav-logo{font-family:var(--serif);font-size:1.15rem;letter-spacing:.06em;font-weight:400;}
+    .nav-links{list-style:none;display:flex;gap:36px;align-items:center;}
+    .nav-links a{font-size:11px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(253,252,250,.6);transition:color .3s;}
+    .nav-links a:hover{color:var(--gold-pale);}
+    .nav-links .nav-book{color:var(--gold);border:1px solid rgba(184,145,58,.45);padding:9px 22px;transition:background .3s,color .3s;}
+    .nav-links .nav-book:hover{background:var(--gold);color:var(--ink);}
+    .hero{position:relative;height:100svh;min-height:660px;display:flex;align-items:flex-end;}
+    .hero-media{position:absolute;inset:0;overflow:hidden;}
+    .hero-media img{object-position:center 20%;}
+    .hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,13,11,.18) 0%,rgba(14,13,11,.08) 40%,rgba(14,13,11,.72) 80%,rgba(14,13,11,.95) 100%);}
+    .hero-body{position:relative;z-index:1;padding:0 6% 8vh;max-width:780px;}
+    .hero-tag{font-size:10px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:14px;}
+    .hero-tag::before{content:'';display:block;width:32px;height:1px;background:var(--gold);}
+    .hero-title{font-family:var(--serif);font-size:clamp(3rem,7.5vw,6.2rem);font-weight:400;line-height:1.06;letter-spacing:-.01em;margin-bottom:28px;}
+    .hero-title em{font-style:italic;color:var(--gold-pale);}
     .hero-sub{font-size:14px;font-weight:300;color:rgba(253,252,250,.62);line-height:1.85;max-width:480px;margin-bottom:40px;}
     .hero-ctas{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
     .btn-solid{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:15px 38px;background:var(--gold);color:var(--ink);border:1px solid var(--gold);cursor:pointer;transition:background .3s;display:inline-block;}
@@ -83,7 +117,7 @@
     .location-note{margin-top:28px;font-size:12px;font-weight:300;color:rgba(253,252,250,.35);font-style:italic;}
     .depo-section{background:var(--ink);padding:100px 6%;} 
     .depo-section .section-head{margin-bottom:56px;} 
-    .depo-grid{display:grid;grid-template-columns:repeat(3,2fr);gap:24px;max-width:1200px;margin:0 auto;} 
+    .depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto;} 
     .depo-card{position:relative;overflow:hidden;border-radius:4px;} 
     .depo-card img{width:100%;display:block;transition:transform .6s var(--ease);} 
     .depo-card:hover img{transform:scale(1.04);} 
@@ -258,12 +292,12 @@ Une expérience intense, élégante et inoubliable.</p>
   <section class="depo-section" id="depoimentos">
     <div class="section-head"><p class="label">clientèle</p><h2>Expériences Vécues</h2></div>
     <div class="depo-grid">
-      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/rencontre-amoureuse-paris-sexmodel.jpg"></div>
-      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/rencontre-luxe-paris-sexmodel.jpg"</div>
-      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/rencontres-paris-17-sexmodel.jpg"</div>
-      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/site-rencontre-paris-france-sexmodel.jpg"</div>
-      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/sortir-a-paris-17-rencontre-sexmodel.jpg"</div>
-      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/dating-paris-17e-sexmodel.jpg"</div>
+      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/rencontre-amoureuse-paris-sexmodel.jpg" alt=""></div>
+      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/rencontre-luxe-paris-sexmodel.jpg" alt=""></div>
+      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/rencontres-paris-17-sexmodel.jpg" alt=""></div>
+      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/site-rencontre-paris-france-sexmodel.jpg" alt=""></div>
+      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/sortir-a-paris-17-rencontre-sexmodel.jpg" alt=""></div>
+      <div class="depo-placeholder"><img src="https://raw.githubusercontent.com/secretbela/camillevalmonte/main/dating-paris-17e-sexmodel.jpg" alt=""></div>
     </div>
   </section>
   <section class="cta-section" id="contato">
