@@ -119,9 +119,11 @@
     .depo-section .section-head{margin-bottom:56px;} 
     .depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto;} 
     .depo-card{position:relative;overflow:hidden;border-radius:4px;} 
-    .depo-card img{width:100%;display:block;transition:transform .6s var(--ease);} 
+    .depo-card img{width:100%;height:auto;display:block;object-fit:unset;transition:transform .6s var(--ease);} 
     .depo-card:hover img{transform:scale(1.04);} 
-    .depo-placeholder{aspect-ratio:9/16;display:flex;align-items:center;justify-content:center;background:#1a1916;border:1px dashed rgba(184,145,58,.3);border-radius:4px;} 
+    
+    .depo-placeholder img{width:100%;height:auto;object-fit:unset;display:block;}
+    .depo-placeholder{display:block;background:#1a1916;border-radius:6px;overflow:hidden;} 
     .depo-placeholder span{font-size:11px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:rgba(184,145,58,.4);text-align:center;padding:20px;line-height:1.8;}
     .cta-section{position:relative;min-height:560px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
     .cta-bg{position:absolute;inset:0;}
