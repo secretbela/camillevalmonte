@@ -332,21 +332,39 @@
   <!-- TrafficJunky Infinity Tag -->
   <script type="text/javascript" src="https://fl-cdn2.contentabc.com/delivery/idsync/idsync.min.js"></script>
   <script>
-    if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}window.addEventListener('load',init);function init() {
-      if (window.idsync && typeof window.idsync.config === 'function') {
-        try { window.idsync.config(37634).fp_get().sync(); } catch(e) {}
-      }
-      // Conversão: clique em qualquer link WhatsApp
-      document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          // Pixel Conversion Tracker WHATSAPP_CLICK (ID 1000575161)
+    (function() {
+      function tjInit() {
+        // Infinity Tag sync (visitas)
+        if (window.idsync && typeof window.idsync.config === 'function') {
+          try { window.idsync.config(37634).fp_get().sync(); } catch(e) {}
+        }
+        // DATING_PARIS_TRACKER (ID 1000574141) — View Of a Key Page
+        (function() {
           var img = document.createElement('img');
-          img.width=1;img.height=1;img.style.display='none';
-          img.src='https://ads.trafficjunky.net/ct?a=1000575161&member_id=1008947311&cb='+Date.now()+'&cti=&ctv=&ctd=WhatsApp_Click';
+          img.id = '1000574141_cpa_testing';
+          img.width = 1; img.height = 1; img.border = 0; img.style.display = 'none';
+          img.src = 'https://ads.trafficjunky.net/ct?a=1000574141&member_id=1008947311&cb=' + Date.now() + '&cti=&ctv=&ctd=pageview';
           document.body.appendChild(img);
+        })();
+        // WHATSAPP_CLICK (ID 1000575161) — Lead — dispara no clique
+        document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+          if (!el._tjBound) {
+            el._tjBound = true;
+            el.addEventListener('click', function() {
+              var img = document.createElement('img');
+              img.width = 1; img.height = 1; img.style.display = 'none';
+              img.src = 'https://ads.trafficjunky.net/ct?a=1000575161&member_id=1008947311&cb=' + Date.now() + '&cti=&ctv=&ctd=WhatsApp_Click';
+              document.body.appendChild(img);
+            });
+          }
         });
-      });
-    });
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', tjInit);
+      } else {
+        tjInit();
+      }
+    })();
   </script>
   <!-- /TrafficJunky -->
   <!-- deploy 1781109797288 -->
