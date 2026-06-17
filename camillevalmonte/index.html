@@ -330,16 +330,20 @@
 </script>
 
   <!-- TrafficJunky Infinity Tag -->
-  <script type="text/javascript" src="https://fl-cdn2.contentabc.com/delivery/idsync/idsync.min.js" defer></script>
+  <script type="text/javascript" src="https://fl-cdn2.contentabc.com/delivery/idsync/idsync.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}window.addEventListener('load',init);function init() {
       if (window.idsync && typeof window.idsync.config === 'function') {
         try { window.idsync.config(37634).fp_get().sync(); } catch(e) {}
       }
       // Conversão: clique em qualquer link WhatsApp
       document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
         el.addEventListener('click', function() {
-          try { window.idsync.config(37634).register('acquisition', { name: 'WhatsApp Click' }); } catch(e) {}
+          // Pixel Conversion Tracker WHATSAPP_CLICK (ID 1000575161)
+          var img = document.createElement('img');
+          img.width=1;img.height=1;img.style.display='none';
+          img.src='https://ads.trafficjunky.net/ct?a=1000575161&member_id=1008947311&cb='+Date.now()+'&cti=&ctv=&ctd=WhatsApp_Click';
+          document.body.appendChild(img);
         });
       });
     });
