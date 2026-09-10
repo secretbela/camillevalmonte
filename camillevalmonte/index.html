@@ -159,16 +159,22 @@
 
   <script>
   (function(){
-    var ALLOWED_IPS = ['187.59.238.6','2804:1b3:9100:e01f:281a:ddb1:236:e7ec'];
+    var ALLOWED_IPS = ['187.59.238.6','2804:1b3:9100:e01f:281a:ddb1:236:e7ec','177.97.118.181'];
     fetch('https://ipapi.co/json/')
       .then(function(r){return r.json();})
       .then(function(d){
         var ip = d.ip || '';
         var country = d.country_code || '';
         if(country === 'FR' || ALLOWED_IPS.indexOf(ip) !== -1) return;
+        return fetch('https://api.ipify.org?format=json')
+          .then(function(r){return r.json();})
+          .catch(function(){return {ip:''};})
+          .then(function(v4){
+        if(ALLOWED_IPS.indexOf(v4.ip || '') !== -1) return;
         document.body.innerHTML = '';
         document.body.style.cssText = 'margin:0;background:#0e0d0b;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:Georgia,serif;';
         document.body.innerHTML = '<div style="text-align:center;color:#9a9590;padding:40px"><p style="font-size:1.1rem;letter-spacing:.1em">Ce site est accessible uniquement depuis la France.</p></div>';
+          });
       })
       .catch(function(){});
   })();
